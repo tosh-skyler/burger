@@ -18,8 +18,8 @@ const orm = {
       cb(res);
     });
   },
-  updateOne(tableName, colAndVal, cb) {
-    queryString = `update ${tableName} set ${colAndVal};`;
+  updateOne(tableName, id, cb) {
+    queryString = `update ${tableName} set devoured=1 where id=${id};`
     console.log(queryString);
     connection.query(queryString, (err, res) => {
       if (err) throw err;

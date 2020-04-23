@@ -22,23 +22,16 @@ router.post("/api/burger", (req, res) => {
   );
 });
 
-router.put("/api/burger/:id", (res, req) => {
-  const condition = `id = ${req.params.id}`;
+router.put("/api/burger/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
 
-  console.log("condition", condition);
-
-  burger.updateOne(
-    {
-      devoured: req.body.devoured,
-    },
-    condition,
-    (result) => {
-      if (result.changedRows == 0) {
-        return res.statusCode(404).end();
-      }
-      res.statusCode(200).end();
+  burger.updateOne(id, (result) => {
+    if (result.changedRows === 0) {
+      return res.status(404).end();
     }
-  );
+    res.status(200).end();
+  });
 });
 
 module.exports = router;
