@@ -3,19 +3,22 @@
 <h2>Burgers Available</h2>
 
 <ul>
-	{{#each burger}}
-	{{#unless devoured}}
-	{{> burgers devoured=true}}
-	{{/unless}}
+	{{#each burgers}}
+	<p>
+		{{this.burger_name}}
+	</p>
 	{{/each}}
 </ul>
 
+
 <h2>Add a Burger</h2>
 <form action="create-form">
+
 	<div class="form-group">
 		<label for="ca">Burger Name:</label>
 		<input type="text" id="burger" name="name">
 	</div>
-	<div class="form-group"></div>
+
+
 	<button type="submit">Add Burger</button>
 </form>
