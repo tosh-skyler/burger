@@ -1,50 +1,52 @@
 <div class="main-area">
 	<div class="burgers-container">
-
-		<div class="burgers-title">
-			<h2>Burgers Available</h2>
+		<div class="card" id="card">
+			<div class="burgers-title">
+				<h2>Burgers Available</h2>
+			</div>
+			<div class="burgers-list">
+				<ul>
+					{{#each burgers}}
+					<p>
+						{{this.burger_name}}
+					</p>
+					{{/each}}
+				</ul>
+			</div>
 		</div>
-
-		<div class="burgers-list">
-			<ul>
-				{{#each burgers}}
-				<p>
-					{{this.burger_name}}
-				</p>
-				{{/each}}
-			</ul>
-		</div>
-
 	</div>
 
 	<div class="consumed-container">
-		<div class="consumed-title">
-			<h2>Consumed Burgers</h2>
-		</div>
-		<div class="consumed-list">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam quia perspiciatis quos quae?
-				Nisi
-				atque facere deserunt iste reprehenderit delectus quas eum odit harum aspernatur eveniet est ut, maiores
-				voluptas optio ad consequatur perferendis error ipsum porro, explicabo itaque.</p>
+		<div class="card2" id="card">
+			<div class="consumed-title">
+				<h2>Consumed Burgers</h2>
+			</div>
+			<div class="consumed-list">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam quia perspiciatis quos
+					quae?
+					Nisi
+					atque facere deserunt iste reprehenderit delectus quas eum odit harum aspernatur eveniet est ut,
+					maiores
+					voluptas optio ad consequatur perferendis error ipsum porro, explicabo itaque.</p>
+			</div>
 		</div>
 	</div>
 
 	<div class="input-container">
+		<div class="card3" id="card">
+			<div class="input-title">
+				<h2>Add a Burger</h2>
+			</div>
+			<div class="input-content">
+				<form action="create-form">
+					<div class="form-group">
+						<label for="ca">Burger Name:</label>
+						<input type="text" id="burger" name="name">
+					</div>
 
-		<div class="input-title">
-			<h2>Add a Burger</h2>
-		</div>
-		<div class="input-content">
-			<form action="create-form">
-
-				<div class="form-group">
-					<label for="ca">Burger Name:</label>
-					<input type="text" id="burger" name="name">
-				</div>
-
-
-				<button type="submit">Add Burger</button>
-			</form>
+					<button type="submit">Add Burger</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
