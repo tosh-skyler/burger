@@ -2,6 +2,7 @@
 
 ### Burger application utilizing Handlebars, Express, and MySQL to create or remove burgers created by the user.
 
+![bannerPic](application.PNG)
 
 ## Installation
 
