@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 const burger = require("../models/burger.js");
 
 router.get("/", (req, res) => {
@@ -15,7 +16,7 @@ router.get("/", (req, res) => {
 router.post("/api/burger", (req, res) => {
   burger.insertOne(
     ["burger_name", "devoured"],
-    [req.body.name, 0],
+    [`'${req.body.burger_name}'`, false],
     (result) => {
       res.json({ id: result.insertId });
     }

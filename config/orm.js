@@ -19,7 +19,7 @@ const orm = {
     });
   },
   updateOne(tableName, id, cb) {
-    queryString = `update ${tableName} set devoured=1 where id=${id};`
+    queryString = `update ${tableName} set devoured=1 where id=${id};`;
     console.log(queryString);
     connection.query(queryString, (err, res) => {
       if (err) throw err;
