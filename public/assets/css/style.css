@@ -1,4 +1,4 @@
-body {
+body, html {
   margin: 0;
   height: 100%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -53,7 +53,10 @@ ul {
 
 .footer { grid-area: footer; }
 
-.header { grid-area: header; }
+.header { 
+  grid-area: header; 
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
 .main-area {
   display: grid;
