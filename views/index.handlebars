@@ -7,12 +7,12 @@
 			<div class="burgers-list">
 				<ul>
 					{{#each burgers}}
-						{{#unless devoured}}
-							<li>
-								<div class="burgeritem">{{this.id}}. {{this.burger_name}}</div>
-								<button class="devour-btn" data-id="{{this.id}}">Devour!</button>
-							</li>
-						{{/unless}}
+					{{#unless devoured}}
+					<li>
+						<div class="burgeritem">{{this.id}}. {{this.burger_name}}</div>
+						<button class="devour-btn" data-id="{{this.id}}">Devour!</button>
+					</li>
+					{{/unless}}
 					{{/each}}
 				</ul>
 			</div>
@@ -27,9 +27,9 @@
 			<div class="consumed-list">
 				<ul>
 					{{#each burgers}}
-						{{#if devoured}}
-							<li>{{this.id}}. {{this.burger_name}} - Devoured </li>
-						{{/if}}
+					{{#if devoured}}
+					<li>{{this.id}}. {{this.burger_name}} - Devoured </li>
+					{{/if}}
 					{{/each}}
 				</ul>
 			</div>
