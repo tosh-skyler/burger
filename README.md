@@ -4,6 +4,10 @@
 
 ![bannerPic](application.PNG)
 
+## Live Demo
+
+https://dashboard.heroku.com/apps/floating-crag-82018
+
 ## Installation
 
 1. Clone the repo to your local machine
